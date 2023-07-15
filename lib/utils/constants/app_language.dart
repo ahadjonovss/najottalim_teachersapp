@@ -10,6 +10,7 @@ class AppTranslations extends Translations {
           "login": "Kirish",
           "enter_your_email": "Elektron pochtangizni kiriting.",
           "enter_your_password": "Parolingizni kiriting.",
+          "groups": "Guruhlar",
         },
         "ru_RU": {
           "log_in_to_your_account": "Войти в личный кабинет",
@@ -18,6 +19,7 @@ class AppTranslations extends Translations {
           "login": "Вход",
           "enter_your_email": "Введите адрес электронной почты.",
           "enter_your_password": "Введите ваш пароль.",
+          "groups": "Группы",
         },
         "en_EN": {
           "log_in_to_your_account": "Login to your account",
@@ -26,6 +28,7 @@ class AppTranslations extends Translations {
           "login": "Login",
           "enter_your_email": "Enter your email.",
           "enter_your_password": "Enter your password.",
+          "groups": "Groups"
         }
       };
 }

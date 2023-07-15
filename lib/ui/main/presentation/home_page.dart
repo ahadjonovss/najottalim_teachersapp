@@ -1,4 +1,4 @@
-import 'package:najottalim_teachersapp/ui/main/bloc/teacher_bloc/teacher_bloc.dart';
+import 'package:najottalim_teachersapp/ui/main/presentation/widgets/group_item.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 class HomePage extends StatelessWidget {
@@ -31,22 +31,20 @@ class HomePage extends StatelessWidget {
                       SizedBox(height: height(context) * 0.18),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20.w),
-                        child: Text("Ballar",
+                        child: Text("groups".tr,
                             style: AppTextStyles.labelLarge(context)),
                       ),
                       SizedBox(height: 12.h),
-                      // SizedBox(
-                      //   height: height(context) * 0.11,
-                      //   width: width(context),
-                      //   child: ListView.builder(
-                      //     scrollDirection: Axis.horizontal,
-                      //     itemCount: state.user!.balls.length,
-                      //     shrinkWrap: true,
-                      //     itemBuilder: (context, index) => BallItem(
-                      //       ball: state.user!.balls[index],
-                      //     ),
-                      //   ),
-                      // )
+                      SizedBox(
+                        height: height(context) * 0.18,
+                        width: width(context),
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: state.groups.length,
+                            shrinkWrap: true,
+                            itemBuilder: (context, index) =>
+                                GroupItem(group: state.groups[index])),
+                      )
                     ],
                   )),
                   Positioned(

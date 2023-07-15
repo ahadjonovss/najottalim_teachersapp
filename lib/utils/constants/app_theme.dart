@@ -11,6 +11,7 @@ class AppTheme {
   static ThemeData dark = ThemeData(
       fontFamily: "Inter",
       backgroundColor: const Color(0xff021923),
+      indicatorColor: const Color(0xFF18222d),
       cardColor: const Color(0xffBA8D5B),
       hintColor: Colors.white,
       canvasColor: const Color(0xFF5A5A5A),
