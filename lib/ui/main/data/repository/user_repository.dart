@@ -28,4 +28,26 @@ class TeacherRepository {
 
     return myResponse;
   }
+
+  Future<MyResponse> getTeachersGroup(List docIds) async {
+    MyResponse myResponse = MyResponse();
+    FirebaseFirestore instance = getFirebaseInstance();
+    List documents = [];
+    try {
+      for (String documentId in docIds) {
+        var snapshot = await instance
+            .collection("groups")
+            .where("groupId", isEqualTo: documentId)
+            .get();
+        documents.add(snapshot.docs.first);
+      }
+      myResponse.data =
+          documents.map((e) => GroupModel.fromJson(e.data())).toList();
+    } catch (e) {
+      print(e.toString());
+      myResponse.message = e.toString();
+    }
+
+    return myResponse;
+  }
 }

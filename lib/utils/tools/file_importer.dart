@@ -26,7 +26,6 @@ export 'package:najottalim_teachersapp/ui/authorization/presentation/widgets/log
 export 'package:najottalim_teachersapp/ui/main/bloc/teacher_bloc/teacher_bloc.dart';
 export 'package:najottalim_teachersapp/ui/main/data/models/ball_model.dart';
 export 'package:najottalim_teachersapp/ui/main/data/models/group_model.dart';
-export 'package:najottalim_teachersapp/ui/main/data/models/user_model.dart';
 export 'package:najottalim_teachersapp/ui/main/data/repository/user_repository.dart';
 export 'package:najottalim_teachersapp/ui/main/presentation/home_page.dart';
 export 'package:najottalim_teachersapp/ui/splash/splash.dart';

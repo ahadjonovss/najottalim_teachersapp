@@ -6,7 +6,7 @@ part 'teacher_event.dart';
 part 'teacher_state.dart';
 
 class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
-  TeacherBloc() : super(TeacherState()) {
+  TeacherBloc() : super(TeacherState(groups: [])) {
     on<GetTeacherEvent>(getTeacher);
   }
 
@@ -19,6 +19,18 @@ class TeacherBloc extends Bloc<TeacherEvent, TeacherState> {
     } else {
       emit(state.copyWith(
           status: ResponseStatus.inFail, message: myResponse.message));
+    }
+  }
+
+  getTeachersGroups(GetTeachersGroupsEvent event, emit) async {
+    emit(state.copyWith(groupsStatus: ResponseStatus.inProgress));
+    MyResponse myResponse =
+        await getIt<TeacherRepository>().getTeachersGroup(event.groupIds);
+    if (myResponse.message.isNull) {
+      emit(state.copyWith(
+          groupsStatus: ResponseStatus.inSuccess, groups: myResponse.data));
+    } else {
+      emit(state.copyWith(groupsStatus: ResponseStatus.inFail));
     }
   }
 }
