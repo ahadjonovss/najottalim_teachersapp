@@ -1,3 +1,4 @@
+import 'package:najottalim_teachersapp/ui/lessons/presentation/lessons_page.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 abstract class RouteName {
@@ -6,6 +7,7 @@ abstract class RouteName {
   static const home = 'home';
   static const login = 'login';
   static const group = 'group';
+  static const lessons = 'lessons';
 }
 
 class AppRoutes {
@@ -21,6 +23,9 @@ class AppRoutes {
             builder: (_) => GroupPage(group: args as GroupModel));
       case RouteName.home:
         return MaterialPageRoute(builder: (_) => HomePage());
+      case RouteName.lessons:
+        return MaterialPageRoute(
+            builder: (_) => LessonsPage(group: args as GroupModel));
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
     }

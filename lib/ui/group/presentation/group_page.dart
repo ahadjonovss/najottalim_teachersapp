@@ -67,7 +67,11 @@ class _GroupPageState extends State<GroupPage> {
                           SizedBox(
                             width: width(context) * 0.45,
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, RouteName.lessons,
+                                      arguments: widget.group);
+                                },
                                 child: const Text("Baholash")),
                           ),
                         ],

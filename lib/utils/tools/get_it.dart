@@ -6,4 +6,5 @@ void setup() {
   getIt.registerLazySingleton(() => AuthorizationRepository());
   getIt.registerLazySingleton(() => TeacherRepository());
   getIt.registerLazySingleton(() => GroupRepository());
+  getIt.registerLazySingleton(() => LessonsRepository());
 }

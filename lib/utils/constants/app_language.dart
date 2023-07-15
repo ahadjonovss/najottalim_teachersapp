@@ -29,7 +29,9 @@ class AppTranslations extends Translations {
           "add_group": "Guruh qo'shish",
           "add_teacher": "Mentor qo'shish",
           "teacher_added": " jamoa safiga muvaffaqqiyatli qo'shildi!",
-          "list_of_groups": "Guruhlari ro'yxati:"
+          "list_of_groups": "Guruhlari ro'yxati:",
+          "add_lesson": "Dars qo'shish",
+          "cancel": "Bekor qilish",
         },
         "ru_RU": {
           "log_in_to_your_account": "Войти в личный кабинет",
@@ -57,7 +59,9 @@ class AppTranslations extends Translations {
           "add_group": "Добавить группу",
           "add_teacher": "Добавить наставника",
           "teacher_added": " успешно присоединился к команде!",
-          "list_of_groups": "Список групп:"
+          "list_of_groups": "Список групп:",
+          "add_lesson": "Добавить урок",
+          "cancel": "Отменить",
         },
         "en_EN": {
           "log_in_to_your_account": "Login to your account",
@@ -85,7 +89,9 @@ class AppTranslations extends Translations {
           "add_group": "Add group",
           "add_teacher": "Add mentor",
           "teacher_added": " successfully joined the team!",
-          "list_of_groups": "List of groups:"
+          "list_of_groups": "List of groups:",
+          "add_lesson": "Add lesson",
+          "cancel": "Cancel"
         }
       };
 }

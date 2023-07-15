@@ -4,16 +4,19 @@ class GroupModel {
   final String groupId;
   final String room;
   final List students;
+  List lessons;
 
   GroupModel(
       {required this.groupName,
       required this.lessonTime,
+      required this.lessons,
       required this.room,
       required this.groupId,
       required this.students});
 
   factory GroupModel.fromJson(Map<String, dynamic> json) {
     return GroupModel(
+        lessons: json["lessons"] ?? [],
         groupId: json["groupId"] ?? '',
         groupName: json["name"] ?? '',
         lessonTime: json["lessonTime"] ?? '',
@@ -23,6 +26,7 @@ class GroupModel {
 
   toJson() {
     return {
+      "lessons": lessons,
       "name": groupName,
       "lessonTime": lessonTime,
       "room": room,

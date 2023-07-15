@@ -28,6 +28,8 @@ export 'package:najottalim_teachersapp/ui/group/data/model/student_model.dart';
 export 'package:najottalim_teachersapp/ui/group/data/repository/group_repository.dart';
 export 'package:najottalim_teachersapp/ui/group/presentation/group_page.dart';
 export 'package:najottalim_teachersapp/ui/group/presentation/widgets/student_item.dart';
+export 'package:najottalim_teachersapp/ui/lessons/data/repository/lessons_repository.dart';
+export 'package:najottalim_teachersapp/ui/lessons/presentation/widgets/lesson_item.dart';
 export 'package:najottalim_teachersapp/ui/main/bloc/teacher_bloc/teacher_bloc.dart';
 export 'package:najottalim_teachersapp/ui/main/data/models/ball_model.dart';
 export 'package:najottalim_teachersapp/ui/main/data/models/group_model.dart';
