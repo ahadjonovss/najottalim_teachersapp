@@ -8,6 +8,7 @@ class App extends StatelessWidget {
     return MultiBlocProvider(providers: [
       BlocProvider(create: (context) => ValidatorBloc()),
       BlocProvider(create: (context) => TeacherBloc()),
+      BlocProvider(create: (context) => GroupBloc()),
     ], child: MyApp());
   }
 }

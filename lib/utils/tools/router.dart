@@ -5,6 +5,7 @@ abstract class RouteName {
   static const authorization = 'authorization';
   static const home = 'home';
   static const login = 'login';
+  static const group = 'group';
 }
 
 class AppRoutes {
@@ -15,6 +16,9 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => SplashPage());
       case RouteName.login:
         return MaterialPageRoute(builder: (_) => LoginPage());
+      case RouteName.group:
+        return MaterialPageRoute(
+            builder: (_) => GroupPage(group: args as GroupModel));
       case RouteName.home:
         return MaterialPageRoute(builder: (_) => HomePage());
       default:

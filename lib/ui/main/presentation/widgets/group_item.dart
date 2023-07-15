@@ -1,5 +1,3 @@
-import 'package:najottalim_teachersapp/ui/widgets/on_tap.dart';
-import 'package:najottalim_teachersapp/utils/constants/app_shimmers.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 class GroupItem extends StatelessWidget {
@@ -9,7 +7,9 @@ class GroupItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnTap(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, RouteName.group, arguments: group);
+      },
       child: BlocBuilder<TeacherBloc, TeacherState>(
         builder: (context, state) {
           if (state.groupsStatus == ResponseStatus.inSuccess) {
