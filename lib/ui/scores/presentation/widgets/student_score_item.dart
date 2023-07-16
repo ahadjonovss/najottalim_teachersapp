@@ -11,8 +11,6 @@ class StudentScoreItem extends StatelessWidget {
   Widget build(BuildContext context) {
     BallModel? findRequiredBall() {
       BallModel? studentsBall;
-      print(
-          "${student.surname} ${student.name} -> ${student.balls.map((e) => e.ball)}");
       for (BallModel ball in student.balls) {
         if (ball.date == lesson) {
           studentsBall = ball;
