@@ -1,17 +1,21 @@
 import '../../../../utils/tools/file_importer.dart';
 
 class BallModel {
-  final int ball;
-  final String date;
-  BallSpecifics specifics;
+  int? ball;
+  String date;
+  BallSpecifics? specifics;
 
-  BallModel({required this.specifics, required this.ball, required this.date});
+  BallModel({this.specifics, this.ball, required this.date});
 
   factory BallModel.fromJson(Map<String, dynamic> json) {
     return BallModel(
         specifics: makeBallSpecifics(json["ball"]),
         ball: json["ball"],
         date: json["date"]);
+  }
+
+  toJson() {
+    return {"ball": ball, "date": date};
   }
 }
 

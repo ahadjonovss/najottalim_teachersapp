@@ -1,4 +1,3 @@
-import 'package:najottalim_teachersapp/ui/lessons/bloc/lessons_bloc/lessons_bloc.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 class App extends StatelessWidget {
@@ -11,6 +10,7 @@ class App extends StatelessWidget {
       BlocProvider(create: (context) => TeacherBloc()),
       BlocProvider(create: (context) => GroupBloc()),
       BlocProvider(create: (context) => LessonsBloc()),
+      BlocProvider(create: (context) => ScoringBloc()),
     ], child: MyApp());
   }
 }

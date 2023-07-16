@@ -7,7 +7,9 @@ class LessonItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnTap(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, RouteName.scoring, arguments: label);
+      },
       child: SizedBox(
         width: width(context),
         child: Column(

@@ -17,15 +17,15 @@ class BallItem extends StatelessWidget {
               gradient: LinearGradient(
                   end: Alignment.topLeft,
                   begin: Alignment.bottomRight,
-                  colors: ball.specifics.gradient),
+                  colors: ball.specifics!.gradient),
               borderRadius: BorderRadius.circular(6.h)),
           alignment: Alignment.center,
           child: Stack(
             children: [
               Image.asset(
-                ball.specifics.backgroundImage,
+                ball.specifics!.backgroundImage,
                 color: Colors.white.withOpacity(0.1),
-                alignment: ball.specifics.backgroundAllignment,
+                alignment: ball.specifics!.backgroundAllignment,
               ),
               Positioned(
                 child: Container(

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 bool isRussianString(String input) {
@@ -64,4 +65,15 @@ BallSpecifics makeBallSpecifics(int ball) {
         backgroundAllignment: Alignment.centerLeft,
         gradient: [Colors.red.shade700, Colors.redAccent]);
   }
+}
+
+void showLoadingDialog(context) {
+  showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) => const CupertinoAlertDialog(
+            content: Padding(
+                padding: EdgeInsets.all(20),
+                child: CircularProgressIndicator()),
+          ));
 }
