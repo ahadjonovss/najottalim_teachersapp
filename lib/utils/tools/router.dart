@@ -1,3 +1,4 @@
+import 'package:najottalim_teachersapp/ui/scores/presentation/scores_page.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 abstract class RouteName {
@@ -8,6 +9,7 @@ abstract class RouteName {
   static const group = 'group';
   static const lessons = 'lessons';
   static const scoring = 'scoring';
+  static const scores = 'scores';
 }
 
 class AppRoutes {
@@ -16,6 +18,9 @@ class AppRoutes {
     switch (settings.name) {
       case RouteName.splash:
         return MaterialPageRoute(builder: (_) => SplashPage());
+      case RouteName.scores:
+        return MaterialPageRoute(
+            builder: (_) => ScoresPage(lesson: args as String));
       case RouteName.scoring:
         return MaterialPageRoute(
             builder: (_) => ScoringPage(lesson: args as String));

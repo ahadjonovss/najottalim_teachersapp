@@ -32,6 +32,9 @@ class AppTranslations extends Translations {
           "list_of_groups": "Guruhlari ro'yxati:",
           "add_lesson": "Dars qo'shish",
           "cancel": "Bekor qilish",
+          "not_scored": "Baholanmagan",
+          "show_scores": "Baholarni ko'rish",
+          "add_score": "Baholash"
         },
         "ru_RU": {
           "log_in_to_your_account": "Войти в личный кабинет",
@@ -62,6 +65,9 @@ class AppTranslations extends Translations {
           "list_of_groups": "Список групп:",
           "add_lesson": "Добавить урок",
           "cancel": "Отменить",
+          "not_scored": "Нет баллов",
+          "show_scores": "Посмотреть оценки",
+          "add_score": "Оценить"
         },
         "en_EN": {
           "log_in_to_your_account": "Login to your account",
@@ -91,7 +97,10 @@ class AppTranslations extends Translations {
           "teacher_added": " successfully joined the team!",
           "list_of_groups": "List of groups:",
           "add_lesson": "Add lesson",
-          "cancel": "Cancel"
+          "cancel": "Cancel",
+          "not_scored": "Not rated",
+          "show_scores": "View ratings",
+          "add_score": "Rate"
         }
       };
 }

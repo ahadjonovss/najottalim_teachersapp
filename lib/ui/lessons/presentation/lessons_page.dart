@@ -48,8 +48,9 @@ class _LessonsPageState extends State<LessonsPage> {
                 Expanded(
                   child: ListView.builder(
                       itemCount: group.lessons.length,
-                      itemBuilder: (context, index) =>
-                          LessonItem(label: group.lessons[index])),
+                      itemBuilder: (context, index) => LessonItem(
+                          label: group.lessons[index],
+                          isAddScore: widget.inputData.isAddScore)),
                 ),
               ],
             ),

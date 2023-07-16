@@ -2,13 +2,18 @@ import '../../../../utils/tools/file_importer.dart';
 
 class LessonItem extends StatelessWidget {
   String label;
-  LessonItem({required this.label, super.key});
+  bool isAddScore;
+  LessonItem({required this.isAddScore, required this.label, super.key});
 
   @override
   Widget build(BuildContext context) {
     return OnTap(
       onTap: () {
-        Navigator.pushNamed(context, RouteName.scoring, arguments: label);
+        if (isAddScore) {
+          Navigator.pushNamed(context, RouteName.scoring, arguments: label);
+        } else {
+          Navigator.pushNamed(context, RouteName.scores, arguments: label);
+        }
       },
       child: SizedBox(
         width: width(context),

@@ -1,5 +1,3 @@
-import 'package:najottalim_teachersapp/ui/group/presentation/sub_screens/group_score_page.dart';
-
 import '../../../utils/tools/file_importer.dart';
 
 class GroupPage extends StatefulWidget {
@@ -27,17 +25,6 @@ class _GroupPageState extends State<GroupPage> {
         slivers: [
           SliverAppBar(
             expandedHeight: height(context) * 0.25,
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MyTablePage(),
-                        ));
-                  },
-                  icon: const Icon(Icons.add))
-            ],
             centerTitle: false,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(widget.group.groupName, textAlign: TextAlign.start),
@@ -62,25 +49,37 @@ class _GroupPageState extends State<GroupPage> {
                             width: width(context) * 0.45,
                             child: TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, RouteName.lessons,
-                                      arguments: LessonInputDataModel(
-                                          group: widget.group,
-                                          isAddScore: false));
+                                  if (context
+                                          .read<GroupBloc>()
+                                          .state
+                                          .groupsStudentsStatus ==
+                                      ResponseStatus.inSuccess) {
+                                    Navigator.pushNamed(
+                                        context, RouteName.lessons,
+                                        arguments: LessonInputDataModel(
+                                            group: widget.group,
+                                            isAddScore: false));
+                                  }
                                 },
-                                child: const Text("Baholarni ko'rish")),
+                                child: Text("show_scores".tr)),
                           ),
                           SizedBox(
                             width: width(context) * 0.45,
                             child: TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, RouteName.lessons,
-                                      arguments: LessonInputDataModel(
-                                          group: widget.group,
-                                          isAddScore: true));
+                                  if (context
+                                          .read<GroupBloc>()
+                                          .state
+                                          .groupsStudentsStatus ==
+                                      ResponseStatus.inSuccess) {
+                                    Navigator.pushNamed(
+                                        context, RouteName.lessons,
+                                        arguments: LessonInputDataModel(
+                                            group: widget.group,
+                                            isAddScore: true));
+                                  }
                                 },
-                                child: const Text("Baholash")),
+                                child: Text("add_score".tr)),
                           ),
                         ],
                       ),
