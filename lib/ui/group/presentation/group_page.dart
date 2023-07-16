@@ -36,7 +36,7 @@ class _GroupPageState extends State<GroupPage> {
                           builder: (context) => MyTablePage(),
                         ));
                   },
-                  icon: Icon(Icons.add))
+                  icon: const Icon(Icons.add))
             ],
             centerTitle: false,
             flexibleSpace: FlexibleSpaceBar(
@@ -61,7 +61,13 @@ class _GroupPageState extends State<GroupPage> {
                           SizedBox(
                             width: width(context) * 0.45,
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, RouteName.lessons,
+                                      arguments: LessonInputDataModel(
+                                          group: widget.group,
+                                          isAddScore: false));
+                                },
                                 child: const Text("Baholarni ko'rish")),
                           ),
                           SizedBox(
@@ -70,7 +76,9 @@ class _GroupPageState extends State<GroupPage> {
                                 onPressed: () {
                                   Navigator.pushNamed(
                                       context, RouteName.lessons,
-                                      arguments: widget.group);
+                                      arguments: LessonInputDataModel(
+                                          group: widget.group,
+                                          isAddScore: true));
                                 },
                                 child: const Text("Baholash")),
                           ),

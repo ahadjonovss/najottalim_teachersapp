@@ -29,7 +29,10 @@ export 'package:najottalim_teachersapp/ui/group/data/repository/group_repository
 export 'package:najottalim_teachersapp/ui/group/presentation/group_page.dart';
 export 'package:najottalim_teachersapp/ui/group/presentation/widgets/student_item.dart';
 export 'package:najottalim_teachersapp/ui/lessons/bloc/lessons_bloc/lessons_bloc.dart';
+export 'package:najottalim_teachersapp/ui/lessons/data/models/lesson_input_data_model.dart';
 export 'package:najottalim_teachersapp/ui/lessons/data/repository/lessons_repository.dart';
+export 'package:najottalim_teachersapp/ui/lessons/presentation/lessons_page.dart';
+export 'package:najottalim_teachersapp/ui/lessons/presentation/widgets/add_lesson_button.dart';
 export 'package:najottalim_teachersapp/ui/lessons/presentation/widgets/lesson_item.dart';
 export 'package:najottalim_teachersapp/ui/main/bloc/teacher_bloc/teacher_bloc.dart';
 export 'package:najottalim_teachersapp/ui/main/data/models/ball_model.dart';
@@ -38,6 +41,7 @@ export 'package:najottalim_teachersapp/ui/main/data/repository/user_repository.d
 export 'package:najottalim_teachersapp/ui/main/presentation/home_page.dart';
 export 'package:najottalim_teachersapp/ui/scoring/bloc/scoring_bloc/scoring_bloc.dart';
 export 'package:najottalim_teachersapp/ui/scoring/data/repository/scoring_repository.dart';
+export 'package:najottalim_teachersapp/ui/scoring/presentation/scoring_page.dart';
 export 'package:najottalim_teachersapp/ui/splash/splash.dart';
 export 'package:najottalim_teachersapp/ui/widgets/on_tap.dart';
 export 'package:najottalim_teachersapp/utils/constants/app_colors.dart';

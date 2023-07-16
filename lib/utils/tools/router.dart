@@ -1,5 +1,3 @@
-import 'package:najottalim_teachersapp/ui/lessons/presentation/lessons_page.dart';
-import 'package:najottalim_teachersapp/ui/scoring/presentation/scoring_page.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 abstract class RouteName {
@@ -30,7 +28,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => HomePage());
       case RouteName.lessons:
         return MaterialPageRoute(
-            builder: (_) => LessonsPage(group: args as GroupModel));
+            builder: (_) =>
+                LessonsPage(inputData: args as LessonInputDataModel));
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
     }
