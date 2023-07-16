@@ -1,4 +1,4 @@
-package com.example.najottalim_teachersapp
+package com.najottalim_teachersapp
 
 import io.flutter.embedding.android.FlutterActivity
 

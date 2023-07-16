@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBQjdCWG1spbP4gFYlzwS68KWcBqDPajd0',
-    appId: '1:898707011522:android:f2f9c1be8165635b42485b',
+    appId: '1:898707011522:android:6d829d48c29c8fcd42485b',
     messagingSenderId: '898707011522',
     projectId: 'najottalimapp-e7226',
     storageBucket: 'najottalimapp-e7226.appspot.com',
@@ -59,7 +59,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyB8YE-v3X8mikrNu3M0YI2M0HpszsQRet8',
-    appId: '1:898707011522:ios:67dfe7afbfc3411842485b',
+    appId: '1:898707011522:ios:d37b75b806a29f4942485b',
     messagingSenderId: '898707011522',
     projectId: 'najottalimapp-e7226',
     storageBucket: 'najottalimapp-e7226.appspot.com',

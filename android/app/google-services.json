@@ -43,9 +43,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:898707011522:android:f2f9c1be8165635b42485b",
+        "mobilesdk_app_id": "1:898707011522:android:6d829d48c29c8fcd42485b",
         "android_client_info": {
-          "package_name": "com.example.najottalim_teachersapp"
+          "package_name": "com.najottalim_teachersapp"
         }
       },
       "oauth_client": [
