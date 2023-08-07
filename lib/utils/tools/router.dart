@@ -1,4 +1,5 @@
 import 'package:najottalim_teachersapp/ui/scores/presentation/scores_page.dart';
+import 'package:najottalim_teachersapp/ui/student/presentation/statistics_page.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 abstract class RouteName {
@@ -10,6 +11,7 @@ abstract class RouteName {
   static const lessons = 'lessons';
   static const scoring = 'scoring';
   static const scores = 'scores';
+  static const studentStats = 'studentStats';
 }
 
 class AppRoutes {
@@ -35,6 +37,9 @@ class AppRoutes {
         return MaterialPageRoute(
             builder: (_) =>
                 LessonsPage(inputData: args as LessonInputDataModel));
+      case RouteName.studentStats:
+        return MaterialPageRoute(
+            builder: (_) => StatisticsPage(user: args as StudentModel));
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
     }

@@ -17,69 +17,65 @@ class ScorableStudentItem extends StatelessWidget {
             listener: (context, state) {
               if (state is AddScoreToStudentsState) {
                 if (!ball.ball.isNull) {
-                  
                   student.balls.add(ball);
                 }
               }
             },
-            child: OnTap(
-              onTap: () {},
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 12.h, vertical: 6.h),
-                width: width(context),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CircleAvatar(
-                            backgroundColor:
-                                AdaptiveTheme.of(context).theme.hintColor,
-                            radius: 22,
-                            backgroundImage: const AssetImage(AppImages.Logo)),
-                        SizedBox(
-                          width: width(context) * 0.6,
-                          child: Text(
-                            "${student.surname} ${student.name}",
-                            style: AppTextStyles.labelLarge(context,
-                                fontSize: 16.h, fontWeight: FontWeight.w400),
-                          ),
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 12.h, vertical: 6.h),
+              width: width(context),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CircleAvatar(
+                          backgroundColor:
+                              AdaptiveTheme.of(context).theme.hintColor,
+                          radius: 22,
+                          backgroundImage: const AssetImage(AppImages.Logo)),
+                      SizedBox(
+                        width: width(context) * 0.6,
+                        child: Text(
+                          "${student.surname} ${student.name}",
+                          style: AppTextStyles.labelLarge(context,
+                              fontSize: 16.h, fontWeight: FontWeight.w400),
                         ),
-                        SizedBox(
-                            height: 40,
-                            width: 60,
-                            child: TextField(
-                              onChanged: (value) {
-                                ball.ball = int.parse(value);
-                                ball.date = label;
-                              },
-                              keyboardType: TextInputType.number,
-                              style: AppTextStyles.labelLarge(context),
-                              decoration: InputDecoration(
-                                labelStyle: AppTextStyles.labelLarge(context,
+                      ),
+                      SizedBox(
+                          height: 40.h,
+                          width: 60,
+                          child: TextField(
+                            onChanged: (value) {
+                              ball.ball = int.parse(value ?? '');
+                              ball.date = label;
+                            },
+                            keyboardType: TextInputType.number,
+                            style: AppTextStyles.labelLarge(context),
+                            decoration: InputDecoration(
+                              labelStyle: AppTextStyles.labelLarge(context,
+                                  color: AdaptiveTheme.of(context)
+                                      .theme
+                                      .cardColor),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
                                     color: AdaptiveTheme.of(context)
                                         .theme
                                         .cardColor),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: AdaptiveTheme.of(context)
-                                          .theme
-                                          .cardColor),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: AdaptiveTheme.of(context)
-                                          .theme
-                                          .cardColor),
-                                ),
                               ),
-                            ))
-                      ],
-                    ),
-                    SizedBox(height: 6.h),
-                    Divider(color: AdaptiveTheme.of(context).theme.focusColor),
-                  ],
-                ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AdaptiveTheme.of(context)
+                                        .theme
+                                        .cardColor),
+                              ),
+                            ),
+                          ))
+                    ],
+                  ),
+                  SizedBox(height: 6.h),
+                  Divider(color: AdaptiveTheme.of(context).theme.focusColor),
+                ],
               ),
             ),
           );

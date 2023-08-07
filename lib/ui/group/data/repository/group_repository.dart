@@ -40,6 +40,7 @@ class GroupRepository {
       myResponse.data =
           documents.map((e) => StudentModel.fromJson(e.data())).toList();
     } catch (e) {
+      print("MANAA $e");
       myResponse.message = e.toString();
     }
 

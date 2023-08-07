@@ -30,9 +30,8 @@ class ScoringPage extends StatelessWidget {
             return BlocListener<ScoringBloc, ScoringState>(
               listener: (context, scoreState) {
                 if (scoreState is AddScoreToStudentsState) {
-                  context
-                      .read<ScoringBloc>()
-                      .add(PostScoresToTheStudentsEvent(state.groupsStudents));
+                  context.read<ScoringBloc>().add(PostScoresToTheStudentsEvent(
+                      state.groupsStudents, lesson));
                 } else if (scoreState.status == ResponseStatus.inProgress) {
                   showLoadingDialog(context);
                 } else if (scoreState.status == ResponseStatus.inSuccess) {

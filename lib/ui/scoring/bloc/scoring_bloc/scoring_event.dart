@@ -7,5 +7,6 @@ class AddScoresToTheStudentsEvent extends ScoringEvent {}
 
 class PostScoresToTheStudentsEvent extends ScoringEvent {
   List<StudentModel> students;
-  PostScoresToTheStudentsEvent(this.students);
+  String date;
+  PostScoresToTheStudentsEvent(this.students, this.date);
 }

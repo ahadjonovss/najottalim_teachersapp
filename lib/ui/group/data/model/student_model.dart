@@ -10,9 +10,11 @@ class StudentModel {
   GroupModel? group;
   final String email;
   final String password;
+  final String fcmToken;
 
   StudentModel(
       {required this.balls,
+      required this.fcmToken,
       required this.email,
       this.password = "12345678",
       required this.docId,
@@ -23,7 +25,9 @@ class StudentModel {
       required this.userId});
 
   factory StudentModel.fromJson(Map<String, dynamic> json) {
+    print(json);
     return StudentModel(
+        fcmToken: json["fcmToken"] ?? '',
         email: json["email"] ?? '',
         balls: (json['balls'] ?? []).map((e) => BallModel.fromJson(e)).toList(),
         docId: json["docId"] ?? '',

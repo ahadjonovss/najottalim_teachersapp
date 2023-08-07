@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.1
+version: 1.0.2
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
@@ -46,6 +46,16 @@ dependencies:
   cloud_firestore: ^4.8.2
   firebase_core: ^2.14.0
   change_app_package_name: ^1.1.0
+  firebase_messaging: ^14.6.5
+  dio: ^4.0.6
+  flutter_slide_drawer: ^1.0.3
+  fl_chart: ^0.63.0
+  carousel_slider: ^4.2.1
+  lottie: ^2.5.0
+  percent_indicator: ^4.2.3
+  upgrader: ^8.1.0
+  flutter_local_notifications: ^15.1.0+1
+  square_percent_indicater: ^0.1.0
 
 
 dev_dependencies:
@@ -64,7 +74,6 @@ dev_dependencies:
   cached_network_image: ^3.2.3
   shimmer: ^2.0.0
   #FireBase
-  firebase_messaging: ^14.6.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

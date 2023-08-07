@@ -20,8 +20,8 @@ class ScoringBloc extends Bloc<ScoringEvent, ScoringState> {
       emit(state.copyWith(status: ResponseStatus.inProgress));
     }
 
-    MyResponse myResponse =
-        await getIt<ScoringRepository>().postScoresToStudents(event.students);
+    MyResponse myResponse = await getIt<ScoringRepository>()
+        .postScoresToStudents(event.students, event.date);
 
     if (myResponse.message.isNull) {
       emit(state.copyWith(status: ResponseStatus.inSuccess));

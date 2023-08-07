@@ -7,7 +7,10 @@ class StudentItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnTap(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, RouteName.studentStats,
+            arguments: student);
+      },
       child: SizedBox(
         width: width(context),
         child: Column(
