@@ -45,15 +45,12 @@ dependencies:
   email_validator: ^2.1.17
   cloud_firestore: ^4.8.2
   firebase_core: ^2.14.0
-  change_app_package_name: ^1.1.0
-  firebase_messaging: ^14.6.5
   dio: ^4.0.6
   flutter_slide_drawer: ^1.0.3
   fl_chart: ^0.63.0
   carousel_slider: ^4.2.1
   lottie: ^2.5.0
   percent_indicator: ^4.2.3
-  upgrader: ^8.1.0
   flutter_local_notifications: ^15.1.0+1
   square_percent_indicater: ^0.1.0
 
@@ -91,6 +88,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/icons/
+    - assets/lotties/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

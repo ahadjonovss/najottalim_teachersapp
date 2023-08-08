@@ -1,4 +1,3 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:najottalim_teachersapp/utils/tools/file_importer.dart';
 
 class SplashPage extends StatefulWidget {
@@ -9,15 +8,15 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-  getToken() async {
-    var token = await FirebaseMessaging.instance.getToken();
-    print(token);
-    print("MANA TOKEN");
-  }
+  // getToken() async {
+  //   var token = await FirebaseMessaging.instance.getToken();
+  //   print(token);
+  //   print("MANA TOKEN");
+  // }
 
   @override
   void initState() {
-    getToken();
+    // getToken();
     FirebaseAuth auth = FirebaseAuth.instance;
     dynamic user = auth.currentUser;
     Future.delayed(const Duration(seconds: 3)).then((value) =>

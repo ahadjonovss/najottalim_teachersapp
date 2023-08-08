@@ -8,4 +8,5 @@ void setup() {
   getIt.registerLazySingleton(() => GroupRepository());
   getIt.registerLazySingleton(() => LessonsRepository());
   getIt.registerLazySingleton(() => ScoringRepository());
+  getIt.registerLazySingleton(() => StatisticsRepository());
 }

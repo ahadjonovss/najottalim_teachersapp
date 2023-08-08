@@ -25,7 +25,9 @@ class ScoringRepository {
     }
 
     for (var i in students) {
-      await sendNotification(i, date);
+      if (i.fcmToken.isNotEmpty) {
+        await sendNotification(i, date);
+      }
     }
 
     return myResponse;

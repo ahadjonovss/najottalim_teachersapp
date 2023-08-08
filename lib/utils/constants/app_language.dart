@@ -34,7 +34,10 @@ class AppTranslations extends Translations {
           "cancel": "Bekor qilish",
           "not_scored": "Baholanmagan",
           "show_scores": "Baholarni ko'rish",
-          "add_score": "Baholash"
+          "add_score": "Baholash",
+          "are_you_sure_to_delete_lesson":
+              "Ushbu darsni rostdan ham o'chirmoqchimisiz?",
+          "yes": "Ha",
         },
         "ru_RU": {
           "log_in_to_your_account": "Войти в личный кабинет",
@@ -100,7 +103,10 @@ class AppTranslations extends Translations {
           "cancel": "Cancel",
           "not_scored": "Not rated",
           "show_scores": "View ratings",
-          "add_score": "Rate"
+          "add_score": "Rate",
+          "are_you_sure_to_delete_lesson":
+              "Are you sure to delete this lesson?",
+          "yes": "Yes"
         }
       };
 }

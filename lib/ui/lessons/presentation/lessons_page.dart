@@ -49,6 +49,12 @@ class _LessonsPageState extends State<LessonsPage> {
                   child: ListView.builder(
                       itemCount: group.lessons.length,
                       itemBuilder: (context, index) => LessonItem(
+                          onRemoved: () {
+                            group.lessons.remove(group.lessons[index]);
+                            context.read<LessonsBloc>().add(
+                                AddLessonToTheGroupEvent(
+                                    group.groupId, group.lessons));
+                          },
                           label: group.lessons[index],
                           isAddScore: widget.inputData.isAddScore)),
                 ),

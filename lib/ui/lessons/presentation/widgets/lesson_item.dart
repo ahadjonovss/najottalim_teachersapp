@@ -1,9 +1,15 @@
+import '../../../../utils/constants/app_dialogs.dart';
 import '../../../../utils/tools/file_importer.dart';
 
 class LessonItem extends StatelessWidget {
   String label;
   bool isAddScore;
-  LessonItem({required this.isAddScore, required this.label, super.key});
+  VoidCallback onRemoved;
+  LessonItem(
+      {required this.isAddScore,
+      required this.label,
+      required this.onRemoved,
+      super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +20,15 @@ class LessonItem extends StatelessWidget {
         } else {
           Navigator.pushNamed(context, RouteName.scores, arguments: label);
         }
+      },
+      onLongTap: () {
+        showAppDialog(
+            context: context,
+            confirmTitle: "yes".tr,
+            title: Text(label, style: AppTextStyles.labelLarge(context)),
+            content: Text("are_you_sure_to_delete_lesson".tr,
+                style: AppTextStyles.labelLarge(context)),
+            onConfirm: onRemoved);
       },
       child: SizedBox(
         width: width(context),
