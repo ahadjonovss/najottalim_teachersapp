@@ -20,7 +20,6 @@ class ScoringRepository {
             .update({"balls": student.balls.map((e) => e.toJson())});
       }
     } catch (e) {
-      print("Mana error ${e.toString()}");
       myResponse.message = e.toString();
     }
 
@@ -34,10 +33,6 @@ class ScoringRepository {
   }
 
   sendNotification(StudentModel student, String date) async {
-    print("Name : ${student.name}");
-    print("surname : ${student.surname}");
-    print("token : ${student.fcmToken}");
-    print("date : ${date}");
     var postUrl = "https://fcm.googleapis.com/fcm/send";
 
     final headers = {

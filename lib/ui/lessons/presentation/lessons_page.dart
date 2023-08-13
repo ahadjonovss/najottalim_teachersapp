@@ -55,7 +55,8 @@ class _LessonsPageState extends State<LessonsPage> {
                                 AddLessonToTheGroupEvent(
                                     group.groupId, group.lessons));
                           },
-                          label: group.lessons[index],
+                          label:
+                              group.lessons[group.lessons.length - index - 1],
                           isAddScore: widget.inputData.isAddScore)),
                 ),
               ],

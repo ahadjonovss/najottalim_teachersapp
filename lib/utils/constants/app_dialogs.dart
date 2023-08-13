@@ -14,7 +14,11 @@ void showAppDialog(
             title: title,
             content: content,
             actions: [
-              TextButton(onPressed: onConfirm, child: Text("cancel".tr)),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("cancel".tr)),
               TextButton(
                   onPressed: onConfirm, child: Text(confirmTitle ?? "save".tr)),
             ],

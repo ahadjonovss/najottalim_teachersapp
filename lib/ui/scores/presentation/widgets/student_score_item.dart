@@ -37,14 +37,14 @@ class StudentScoreItem extends StatelessWidget {
     return BlocListener<ScoringBloc, ScoringState>(
       listener: (context, state) {
         if (state.status == ResponseStatus.inSuccess) {
-          Navigator.pop(context);
+          //  Navigator.pop(context);
         }
       },
       child: OnTap(
         onTap: () {
           showDialog(
               context: context,
-              barrierDismissible: false,
+              // barrierDismissible: false,
               builder: (context) => AlertDialog(
                     backgroundColor:
                         AdaptiveTheme.of(context).theme.backgroundColor,
